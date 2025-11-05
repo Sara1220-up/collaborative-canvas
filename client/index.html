@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎨 Real-Time Collaborative Drawing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>🎨 Real-Time Collaborative Drawing</h2>
+
+  <!-- Toolbar -->
+  <div id="toolbar">
+    <label for="colorPicker">🎨</label>
+    <input type="color" id="colorPicker" value="#000000">
+    <label for="brushSize"></label>
+    <input type="range" id="brushSize" min="1" max="20" value="3">
+    <button id="undoBtn">Undo</button>
+    <button id="redoBtn">Redo</button>
+    <button id="clearBtn">Clear</button>
+  </div>
+
+  <!-- Online Users List -->
+  <div id="usersList">
+    <h3>Online Users</h3>
+    <ul id="users"></ul>
+  </div>
+
+  <!-- Drawing Canvas -->
+  <canvas id="drawCanvas" width="900" height="600"></canvas>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
